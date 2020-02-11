@@ -7,11 +7,26 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+	
 }
-
+#container{
+	display: none;
+}
+@keyframes showContent{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.showContainer{
+	animation-name: showContent;
+	animation-duration: .5s;
+	animation-fill-mode: forwards;
+}
 /*firstPage*/
 #coverImage{
-	display: none;
 	position: absolute;
 	z-index: 4;
 	width: 100%;
@@ -141,7 +156,9 @@
 }
 
 /*menu*/
+
 #menu > ul{
+	flex-wrap: wrap;
 	list-style-type: none;
 	display: flex;
 	width: 100%;
@@ -151,22 +168,100 @@
 	padding: 10px;
 	box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.5);
 }
+
 #menu > ul > li{
-	padding: 10px 15px;
 	transition: .2s;
 	border-radius: 5px;
 }
 #menu > ul > li:hover{
 	background-color: rgba(0,0,0,0.1);
+	cursor: pointer;
 }
 
 #menu > ul > li > a{
+	display: block;
+	position: relative;
+	padding: 10px 15px;
 	color: white;
 	font-size: 24px;
 	text-decoration: none;
 	font-family: Roboto;
 	font-weight: bold;
 }
+
+/*content*/
+#content{
+	margin-top: 20px;
+	width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #ecad4d;
+	border-radius: 5px;
+	padding: 30px;
+}
+@media screen and (max-width: 1260px){
+	#content{
+		max-width: 100%;
+	}
+}
+
+/*footer*/
+#footer{
+	background-color: rgba(0,0,0,0.9);
+	width: 100%;
+	bottom: 0;
+	margin-top: 50px;
+}
+
+@media screen and (max-width: 800px){
+	#socialMedia{
+		max-width: 100%;
+	}
+}
+
+#socialMedia{
+	flex-wrap: wrap;
+	list-style-type: none;
+	display: flex;
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#socialMedia > li{
+	flex: 1;
+	display: block;
+	position: relative;
+	text-align: center;
+	transition: .2s;
+}
+
+#socialMedia > li > a {
+	display: block;
+	position: relative;
+	color: white;
+	text-decoration: none;
+	font-size: 2.5em;
+	padding: 30px;
+}
+#fb:hover{
+	background-color: #4267b2;
+}
+#in:hover{
+	background-color: #8e389d;
+}
+#yt:hover{
+	background-color: #ff0000;
+}
+
+#footerText{
+	background: rgb(0,0,0);
+	color: white;
+	text-align: center;
+	font-family: Roboto;
+	font-size: 18px;
+	padding: 10px;
+}
+
 
 
 
