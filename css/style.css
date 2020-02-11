@@ -2,6 +2,10 @@
 	font-family: Roboto;
 	src: url('../fonts/roboto/Roboto-Thin.ttf');
 }
+@font-face{
+	font-family: coco;
+	src: url('../fonts/cocogoose/CocogooseProLight-trial.ttf');
+}
 
 * {
 	padding: 0;
@@ -49,12 +53,41 @@
 	flex-direction: column;
 }
 
+@keyframes changeLogo{
+	0%{
+		opacity: 0;
+		transform: translateY(-50px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
 #logoImage{
+	opacity: 0;
+	animation-name: changeLogo;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-delay: .2s;
 	border: 10px rgb(170, 121, 31) solid;
 	border-radius: 100%;
 }
 
+@keyframes showButton{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
 #moveToPage{
+	animation-name: showButton;
+	animation-duration: .5s;
+	animation-delay: 1.2s;
+	opacity: 0;
+	animation-fill-mode: forwards;
 	margin-top: 10px;
 	background-color: rgba(0,0,0, 0.8);
 	color: white;
@@ -146,8 +179,8 @@
 	background-repeat: no-repeat;
 }
 
-
 #sliderLogo{
+	position: relative;
 	z-index: 3;
 	border: 10px rgb(170, 121, 31) solid;
 	border-radius: 100%;
@@ -191,13 +224,36 @@
 
 /*content*/
 #content{
+	text-align: center;
 	margin-top: 20px;
 	width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
 	background-color: #ecad4d;
 	border-radius: 5px;
-	padding: 30px;
+	padding: 50px;
+	
+}
+.contentText{
+	font-size: 40px;
+	color: white;
+	font-family: Roboto;
+	font-weight: bold;
+}
+@media screen and (max-width: 600px){
+	#piekarniaContent{
+		max-width: 100%;
+	}
+	.contentText{
+		font-size: 24px;
+	}
+}
+#piekarniaContent{
+	margin: 20px auto;
+	border: 3px solid white;
+	border-radius: 5px;
+	width: 500px;
+	height: auto;
 }
 @media screen and (max-width: 1260px){
 	#content{
@@ -209,7 +265,6 @@
 #footer{
 	background-color: rgba(0,0,0,0.9);
 	width: 100%;
-	bottom: 0;
 	margin-top: 50px;
 }
 
