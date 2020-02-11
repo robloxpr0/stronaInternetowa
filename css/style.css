@@ -9,7 +9,14 @@
 	box-sizing: border-box;
 }
 
+/*firstPage*/
 #coverImage{
+	display: none;
+	position: absolute;
+	z-index: 4;
+	width: 100%;
+	top: 0;
+	left: 0;
 	background-image: url('../img/piekarnia.jpg');
 	height: 100vh;
 	background-size: cover;
@@ -17,9 +24,10 @@
 	background-repeat: no-repeat;
 }
 
+
 #blackCurtain{
 	height: 100%;
-	background-color: rgba(0, 0, 0, 0.6);
+	background-color: rgba(0, 0, 0, 0.7);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -41,9 +49,128 @@
 	font-family: Roboto;
 	cursor: pointer;
 	transition: .2s;
+	
 }
 
 #moveToPage:hover{
 	background-color: rgba(255,255,255, 0.8);
 	color: black;
 }
+
+@keyframes movePage{
+	0%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+	}
+}
+
+.move{
+	animation-name: movePage;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+/*mainContent*/
+
+#slider{
+	position: relative;
+	height: 30vh;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+}
+
+@keyframes changeOpacity1{
+	0%{
+		opacity: 1;
+	}
+	50%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+@keyframes changeOpacity2{
+	0%{
+		opacity: 0;
+	}
+	50%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+	}
+}
+#photo1{
+	animation-name: changeOpacity1;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	z-index: 2;
+	position: absolute;
+	width: 100%;
+	background-image: url('../img/photo1.jpg');
+	height: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#photo2{
+	animation-name: changeOpacity2;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	z-index: 1;
+	width: 100%;
+	position: absolute;
+	background-image: url('../img/photo2.jpeg');
+	height: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+
+#sliderLogo{
+	z-index: 3;
+	border: 10px rgb(170, 121, 31) solid;
+	border-radius: 100%;
+	width: 170px;
+	margin-left: 5vw;
+}
+
+/*menu*/
+#menu > ul{
+	list-style-type: none;
+	display: flex;
+	width: 100%;
+	justify-content: space-evenly;
+	align-items: center;
+	background-color: #ecad4d;
+	padding: 10px;
+	box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.5);
+}
+#menu > ul > li{
+	padding: 10px 15px;
+	transition: .2s;
+	border-radius: 5px;
+}
+#menu > ul > li:hover{
+	background-color: rgba(0,0,0,0.1);
+}
+
+#menu > ul > li > a{
+	color: white;
+	font-size: 24px;
+	text-decoration: none;
+	font-family: Roboto;
+	font-weight: bold;
+}
+
+
+
+
+
+
+
