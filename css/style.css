@@ -11,7 +11,6 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-	
 }
 #container{
 	display: none;
@@ -186,32 +185,39 @@
 	border-radius: 100%;
 	width: 170px;
 	margin-left: 5vw;
+	transition: transform .2s;
 }
-
+#sliderLogo:hover{
+	transform: scale(0.9);
+}
 /*menu*/
-
-#menu > ul{
+#menu{
+	position: relative;
+	display: flex;
+	align-items: center;
+	background-color: #ecad4d;
+	box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.5);
+}
+#menuul{
 	flex-wrap: wrap;
 	list-style-type: none;
 	display: flex;
 	width: 100%;
 	justify-content: space-evenly;
 	align-items: center;
-	background-color: #ecad4d;
 	padding: 10px;
-	box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.5);
 }
 
-#menu > ul > li{
+#menuul> li{
 	transition: .2s;
 	border-radius: 5px;
 }
-#menu > ul > li:hover{
+#menuul> li:hover{
 	background-color: rgba(0,0,0,0.1);
 	cursor: pointer;
 }
 
-#menu > ul > li > a{
+#menuul> li > a{
 	display: block;
 	position: relative;
 	padding: 10px 15px;
@@ -222,6 +228,22 @@
 	font-weight: bold;
 }
 
+/*hamburger*/
+#hamburger{
+	display: none;
+}
+.ham-el{
+	transition: .2s;
+	width: 35px;
+	height: 5px;
+	margin-bottom: 5px;
+	background-color: white;
+	border-radius: 10px;
+}
+
+#menuMobile{
+	display: none;
+}
 /*content*/
 #content{
 	text-align: center;
@@ -240,14 +262,7 @@
 	font-family: Roboto;
 	font-weight: bold;
 }
-@media screen and (max-width: 600px){
-	#piekarniaContent{
-		max-width: 100%;
-	}
-	.contentText{
-		font-size: 24px;
-	}
-}
+
 #piekarniaContent{
 	margin: 20px auto;
 	border: 3px solid white;
@@ -315,6 +330,92 @@
 	font-family: Roboto;
 	font-size: 18px;
 	padding: 10px;
+}
+
+/*mobile*/
+@media screen and (max-width: 768px){
+	#piekarniaContent{
+		max-width: 100%;
+	}
+	.contentText{
+		font-size: 28px;
+	}
+	#hamburger{
+		display: block;
+		padding: 17px;
+		cursor: pointer;
+		z-index: 6;
+	}
+
+	#line1.change1{
+		transform:  translateY(10px) rotate(45deg);
+	}
+	#line2.change2{
+		opacity: 0;
+	}
+	#line3.change3{
+		transform: translateY(-10px) rotate(-45deg);
+	}
+
+	#menu{
+		justify-content: flex-end;
+		position: static;
+	}
+	#menuul{
+		display: none;
+	}
+	#menuMobile{
+		display: block;
+		opacity: 0;
+		height: 0;
+		transition: all .5s;
+		background-color: rgba(0,0,0,0.9);
+		overflow: hidden;
+	}
+	#menuMobile > li {
+		display: block;
+		width: auto;
+		position: relative;
+		padding: 10px;
+	}
+	#menuMobile > li > a{
+		display: block;
+		width: auto;
+		position: relative;
+		color: white;
+		text-decoration: none;
+		font-family: Roboto;
+		font-size: 20px;
+	}
+	#menuMobile.is-active{
+		opacity: 1;
+		height: 40vh;
+		display: flex;
+		flex-direction: column;
+		list-style-type: none;
+		justify-content: space-evenly;
+		width: 100%;
+		background-color: rgba(0,0,0,0.9);
+		padding: 10px;
+	}
+	#menuMobile.is-active > li {
+		display: block;
+		width: auto;
+		position: relative;
+		padding: 10px;
+	}
+	#menuMobile.is-active > li > a{
+		display: block;
+		width: auto;
+		position: relative;
+		color: white;
+		text-decoration: none;
+		font-family: Roboto;
+		font-size: 20px;
+	}
+	#menuMobile.is-active > li:hover{
+		background-color: rgba(0,0,0,0.5);
+	}
 }
 
 
