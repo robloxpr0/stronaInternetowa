@@ -14,6 +14,8 @@ function showContent(){
     container.classList.toggle('showContainer');
     let cialo = document.querySelector('body');
     cialo.style.overflow = "auto";
+    let html = document.querySelector('html');
+    html.style.overflow = "auto";
 }
 
 window.onbeforeunload = function () {
