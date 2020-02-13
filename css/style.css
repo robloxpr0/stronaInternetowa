@@ -25,6 +25,7 @@ body{
 	}
 }
 #container{
+	position: relative;
 	opacity: 0;
 }
 .showContainer{
