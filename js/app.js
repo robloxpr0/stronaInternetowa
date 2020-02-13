@@ -26,4 +26,15 @@ fb.addEventListener('touchstart', function(){
 fb.addEventListener('touchend', function(){
     fb.classList.remove('fbHover');
 });
-
+insta.addEventListener('touchstart', function(){
+    insta.classList.add('inHover');
+});
+insta.addEventListener('touchend', function(){
+    insta.classList.remove('inHover');
+});
+yt.addEventListener('touchstart', function(){
+    yt.classList.add('ytHover');
+});
+yt.addEventListener('touchend', function(){
+    yt.classList.remove('ytHover');
+});

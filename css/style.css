@@ -341,7 +341,13 @@ body{
 #insta:hover{
 	background-color: #8e389d;
 }
+.inHover{
+	background-color: #8e389d;
+}
 #yt:hover{
+	background-color: #ff0000;
+}
+.ytHover{
 	background-color: #ff0000;
 }
 
@@ -445,6 +451,15 @@ body{
 	}
 	#menuMobile.is-active > li:hover, li:focus{
 		background-color: rgba(0,0,0,0.5);
+	}
+	#fb:hover{
+		background-color: none;
+	}
+	#insta:hover{
+		background-color: none;
+	}
+	#yt:hover{
+		background-color: none;
 	}
 }
 
