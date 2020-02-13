@@ -19,15 +19,11 @@ function mojaFunkcja(){
         slider.classList.remove('margin');
     }
 }
-fb.addEventListener('click', function(){
-    fb.style.backgroundColor = '#4267b2';
-});
 
-insta.addEventListener('click', function(){
-    insta.style.backgroundColor = '#8e389d';
+fb.addEventListener('touchstart', function(){
+    fb.classList.add('fbHover');
 });
-
-yt.addEventListener('click', function(){
-    yt.style.backgroundColor = '#ff0000';
+fb.addEventListener('touchend', function(){
+    fb.classList.remove('fbHover');
 });
 
