@@ -12,8 +12,9 @@
 	margin: 0;
 	box-sizing: border-box;
 }
-#container{
-	display: none;
+
+body{
+	overflow: hidden;
 }
 @keyframes showContent{
 	0%{
@@ -22,6 +23,9 @@
 	100%{
 		opacity: 1;
 	}
+}
+#container{
+	opacity: 0;
 }
 .showContainer{
 	animation-name: showContent;
@@ -128,6 +132,9 @@
 	align-items: center;
 	overflow: hidden;
 }
+#slider.margin{
+	margin-bottom: 90px;
+}
 
 @keyframes changeOpacity1{
 	0%{
@@ -197,7 +204,18 @@
 	align-items: center;
 	background-color: #ecad4d;
 	box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.5);
+	flex-direction: column;
+	justify-content: flex-end;
+	transition: .2s;
 }
+#menu.scrolled{
+	position: fixed;
+	width: 100%;
+	top: 0;
+	box-shadow: none;
+	background-color: #282828;
+}
+
 #menuul{
 	flex-wrap: wrap;
 	list-style-type: none;
@@ -334,6 +352,12 @@
 
 /*mobile*/
 @media screen and (max-width: 768px){
+	#logoImage{
+		width: 250px;
+	}
+	#sliderLogo{
+		width: 150px;
+	}
 	#piekarniaContent{
 		max-width: 100%;
 	}
@@ -361,6 +385,7 @@
 		justify-content: flex-end;
 		position: static;
 	}
+	
 	#menuul{
 		display: none;
 	}
@@ -371,6 +396,7 @@
 		transition: all .5s;
 		background-color: rgba(0,0,0,0.9);
 		overflow: hidden;
+		width: 100%;
 	}
 	#menuMobile > li {
 		display: block;
