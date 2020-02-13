@@ -332,13 +332,13 @@ body{
 	font-size: 2.5em;
 	padding: 30px;
 }
-#fb:hover, #fb:focus{
+#fb:hover{
 	background-color: #4267b2;
 }
-#in:hover, #in:focus{
+#in:hover{
 	background-color: #8e389d;
 }
-#yt:hover, #yt:focus{
+#yt:hover{
 	background-color: #ff0000;
 }
 

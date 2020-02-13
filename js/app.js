@@ -19,4 +19,8 @@ function mojaFunkcja(){
         slider.classList.remove('margin');
     }
 }
+fb.ontouchstart = changeFb;
+function changeFb(){
+    fb.style.backgroundColor = '#4267b2;'
+} 
 
