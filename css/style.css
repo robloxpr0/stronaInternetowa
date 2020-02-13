@@ -335,10 +335,10 @@ body{
 #fb:hover, #fb:focus{
 	background-color: #4267b2;
 }
-#in:hover, #fb:focus{
+#in:hover, #in:focus{
 	background-color: #8e389d;
 }
-#yt:hover, #fb:focus{
+#yt:hover, #yt:focus{
 	background-color: #ff0000;
 }
 
