@@ -104,7 +104,7 @@ body{
 	
 }
 
-#moveToPage:hover{
+#moveToPage:hover, #moveToPage:focus{
 	background-color: rgba(255,255,255, 0.8);
 	color: black;
 }
@@ -195,7 +195,7 @@ body{
 	margin-left: 5vw;
 	transition: transform .2s;
 }
-#sliderLogo:hover{
+#sliderLogo:hover, #sliderLogo:focus{
 	transform: scale(0.9);
 }
 /*menu*/
@@ -231,7 +231,7 @@ body{
 	transition: .2s;
 	border-radius: 5px;
 }
-#menuul> li:hover{
+#menuul> li:hover, li:focus{
 	background-color: rgba(0,0,0,0.1);
 	cursor: pointer;
 }
@@ -332,13 +332,13 @@ body{
 	font-size: 2.5em;
 	padding: 30px;
 }
-#fb:hover{
+#fb:hover, #fb:focus{
 	background-color: #4267b2;
 }
-#in:hover{
+#in:hover, #fb:focus{
 	background-color: #8e389d;
 }
-#yt:hover{
+#yt:hover, #fb:focus{
 	background-color: #ff0000;
 }
 
@@ -440,7 +440,7 @@ body{
 		font-family: Roboto;
 		font-size: 20px;
 	}
-	#menuMobile.is-active > li:hover{
+	#menuMobile.is-active > li:hover, li:focus{
 		background-color: rgba(0,0,0,0.5);
 	}
 }
