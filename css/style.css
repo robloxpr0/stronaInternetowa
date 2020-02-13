@@ -12,70 +12,13 @@
 	margin: 0;
 	box-sizing: border-box;
 }
-
 body{
-	overflow: hidden;
-}
-@keyframes showContent{
-	0%{
-		opacity: 0;
-	}
-	100%{
-		opacity: 1;
-	}
+	position: relative;
 }
 #container{
 	position: relative;
-	opacity: 0;
-}
-.showContainer{
-	animation-name: showContent;
-	animation-duration: .5s;
-	animation-fill-mode: forwards;
-}
-/*firstPage*/
-#coverImage{
-	position: absolute;
-	z-index: 4;
-	width: 100%;
-	top: 0;
-	left: 0;
-	background-image: url('../img/piekarnia.jpg');
-	height: 100vh;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
 }
 
-
-#blackCurtain{
-	height: 100%;
-	background-color: rgba(0, 0, 0, 0.7);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-}
-
-@keyframes changeLogo{
-	0%{
-		opacity: 0;
-		transform: translateY(-50px);
-	}
-	100%{
-		opacity: 1;
-		transform: translateY(0);
-	}
-}
-#logoImage{
-	opacity: 0;
-	animation-name: changeLogo;
-	animation-duration: 1s;
-	animation-fill-mode: forwards;
-	animation-delay: .2s;
-	border: 10px rgb(170, 121, 31) solid;
-	border-radius: 100%;
-}
 
 @keyframes showButton{
 	0%{
@@ -86,44 +29,6 @@ body{
 	}
 }
 
-#moveToPage{
-	animation-name: showButton;
-	animation-duration: .5s;
-	animation-delay: 1.2s;
-	opacity: 0;
-	animation-fill-mode: forwards;
-	margin-top: 10px;
-	background-color: rgba(0,0,0, 0.8);
-	color: white;
-	padding: 25px;
-	border-radius: 15px;
-	font-size: 1.5em;
-	font-family: Roboto;
-	cursor: pointer;
-	transition: .2s;
-	
-}
-
-#moveToPage:hover, #moveToPage:focus{
-	background-color: rgba(255,255,255, 0.8);
-	color: black;
-}
-
-@keyframes movePage{
-	0%{
-		opacity: 1;
-	}
-	100%{
-		opacity: 0;
-	}
-}
-
-.move{
-	animation-name: movePage;
-	animation-duration: 1s;
-	animation-fill-mode: forwards;
-}
-
 /*mainContent*/
 
 #slider{
@@ -132,9 +37,6 @@ body{
 	display: flex;
 	align-items: center;
 	overflow: hidden;
-}
-#slider.margin{
-	margin-bottom: 90px;
 }
 
 @keyframes changeOpacity1{
@@ -209,15 +111,14 @@ body{
 	justify-content: flex-end;
 	transition: .2s;
 }
-#menu.scrolled{
+#menu.menuFixed{
 	position: fixed;
 	width: 100%;
 	top: 0;
 	box-shadow: none;
 	background-color: #282828;
 }
-
-#menuul{
+#menuList{
 	flex-wrap: wrap;
 	list-style-type: none;
 	display: flex;
@@ -227,16 +128,16 @@ body{
 	padding: 10px;
 }
 
-#menuul> li{
+#menuList> li{
 	transition: .2s;
 	border-radius: 5px;
 }
-#menuul> li:hover, li:focus{
+#menuList> li:hover, li:focus{
 	background-color: rgba(0,0,0,0.1);
 	cursor: pointer;
 }
 
-#menuul> li > a{
+#menuList> li > a{
 	display: block;
 	position: relative;
 	padding: 10px 15px;
@@ -260,9 +161,6 @@ body{
 	border-radius: 10px;
 }
 
-#menuMobile{
-	display: none;
-}
 /*content*/
 #content{
 	text-align: center;
@@ -273,8 +171,8 @@ body{
 	background-color: #ecad4d;
 	border-radius: 5px;
 	padding: 50px;
-	
 }
+
 .contentText{
 	font-size: 40px;
 	color: white;
@@ -390,57 +288,31 @@ body{
 	#line3.change3{
 		transform: translateY(-10px) rotate(-45deg);
 	}
-
-	#menu{
-		justify-content: flex-end;
-		position: static;
-	}
-	
-	#menuul{
-		display: none;
-	}
-	#menuMobile{
-		display: block;
-		opacity: 0;
+	#menuList{
+		position: absolute;
+		top: 63px;
 		height: 0;
-		transition: all .5s;
-		background-color: rgba(0,0,0,0.9);
-		overflow: hidden;
-		width: 100%;
-	}
-	#menuMobile > li {
-		display: block;
-		width: auto;
-		position: relative;
-		padding: 10px;
-	}
-	#menuMobile > li > a{
-		display: block;
-		width: auto;
-		position: relative;
-		color: white;
-		text-decoration: none;
-		font-family: Roboto;
-		font-size: 20px;
-	}
-	#menuMobile.is-active{
-		opacity: 1;
-		height: 40vh;
+		opacity: 0;
+		transition: .5s;
 		display: flex;
 		flex-direction: column;
 		list-style-type: none;
 		justify-content: space-evenly;
 		width: 100%;
-		background-color: rgba(0,0,0,0.9);
 		padding: 10px;
 	}
-	#menuMobile.is-active > li {
-		display: block;
-		width: auto;
+	#menuList > li {
+		display: none;
 		position: relative;
 		padding: 10px;
+		width: 100%;
+		opacity: 0;
+		transition: .2s;
 	}
-	#menuMobile.is-active > li > a{
+	#menuList > li > a{
+		display: none;
+		opacity: 0;
+		transition: .2s;
 		display: block;
 		width: auto;
 		position: relative;
@@ -449,8 +321,40 @@ body{
 		font-family: Roboto;
 		font-size: 20px;
 	}
-	#menuMobile.is-active > li:hover, li:focus{
+	#menuList.is-active{
+		height: 45vh;
+		opacity: 1;
+		display: flex;
+		flex-direction: column;
+		list-style-type: none;
+		justify-content: space-evenly;
+		width: 100%;
+		background-color: #191919;
+		padding: 10px;
+	}
+	#menuList.is-active > li {
+		opacity: 1;
+		display: block;
+		width: auto;
+		position: relative;
+		padding: 10px;
+		width: 100%;
+	}
+	#menuList.is-active > li > a{
+		display: block;
+		opacity: 1;
+		width: auto;
+		position: relative;
+		color: white;
+		text-decoration: none;
+		font-family: Roboto;
+		font-size: 20px;
+	}
+	#menuList.is-active > li:hover, li:focus{
 		background-color: rgba(0,0,0,0.5);
+	}
+	#socialMedia > li{
+		transition: 0;
 	}
 	#fb:hover{
 		background-color: none;
