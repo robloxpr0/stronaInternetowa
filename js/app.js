@@ -23,3 +23,11 @@ fb.addEventListener('click', function(){
     fb.style.backgroundColor = '#4267b2';
 });
 
+insta.addEventListener('click', function(){
+    insta.style.backgroundColor = '#8e389d';
+});
+
+yt.addEventListener('click', function(){
+    yt.style.backgroundColor = '#ff0000';
+});
+
