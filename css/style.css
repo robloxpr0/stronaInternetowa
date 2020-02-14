@@ -18,8 +18,6 @@ body{
 #container{
 	position: relative;
 }
-
-
 @keyframes showButton{
 	0%{
 		opacity: 0;
@@ -28,9 +26,7 @@ body{
 		opacity: 1;
 	}
 }
-
 /*mainContent*/
-
 #slider{
 	position: relative;
 	height: 30vh;
@@ -38,7 +34,6 @@ body{
 	align-items: center;
 	overflow: hidden;
 }
-
 @keyframes changeOpacity1{
 	0%{
 		opacity: 1;
@@ -50,7 +45,6 @@ body{
 		opacity: 1;
 	}
 }
-
 @keyframes changeOpacity2{
 	0%{
 		opacity: 0;
@@ -181,7 +175,7 @@ body{
 }
 
 #piekarniaContent{
-	margin: 20px auto;
+	margin: 50px auto;
 	border: 3px solid white;
 	border-radius: 5px;
 	width: 500px;
@@ -292,7 +286,6 @@ body{
 		position: absolute;
 		top: 63px;
 		height: 0;
-		opacity: 0;
 		transition: .5s;
 		display: flex;
 		flex-direction: column;
