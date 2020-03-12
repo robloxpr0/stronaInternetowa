@@ -54,12 +54,17 @@
     #content{
         width: 100%;
     }
+    #content img{
+        width: 100%;
+        height: auto;
+    }
     #wrapper2{
         flex-direction: column;
         width: 100%;
     }
     #wrapper2 img{
         width: 100%;
+        height: auto;
     }
     #galeria1a, #galeria2a, #galeria3a{
         margin: 0;
