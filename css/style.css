@@ -111,6 +111,7 @@ body{
 	top: 0;
 	box-shadow: none;
 	background-color: #282828;
+	z-index: 150;
 }
 #menuList{
 	flex-wrap: wrap;
