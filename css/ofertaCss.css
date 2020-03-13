@@ -1,8 +1,8 @@
-
 #cennikTxt{
-    color: white;
+    color: #ffffff;
     font-size: 32px;
     font-family: Roboto;
+    font-weight: 600;
 }
 #content{
     display: flex;
@@ -12,8 +12,25 @@
 #cennik{
     border-spacing: 0;
     border-collapse: collapse;
+    font-family: Roboto;
+    font-size: 18px;
+    margin-top: 30px;
+    color: #FFF;
+    font-weight: 600;
 }
 #cennik td{
-    border: 1px solid #ffffff;
-    padding: 20px;
+    border: 1px solid #BA883D;
+    padding: 30px;
+}
+#cennik th{
+    border: 1px solid #552205;
+    padding: 30px;
+    background-color: #552205;
+}
+
+#cennik tr:nth-child(odd){
+    background-color: #EDAE4E;
+}
+#cennik tr:nth-child(even){
+    background-color: #D6A23C;
 }
