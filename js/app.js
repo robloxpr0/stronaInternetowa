@@ -6,9 +6,13 @@ function hamburgerClick() {
     line3.classList.toggle('change3');
 }
 let menuHeight;
-let navOff = menu.offsetTop;
+let navOff;
+
 window.onscroll = fixedNav;
 function fixedNav(){
+    if(menu.offsetTop != 0){
+        navOff = menu.offsetTop;
+    }
     menuHeight = menu.offsetHeight;
     if(pageYOffset >= navOff){
         menu.classList.add('menuFixed');
