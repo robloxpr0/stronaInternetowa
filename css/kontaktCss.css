@@ -1,3 +1,7 @@
+body {
+    font-size: 16px;
+}
+
 #content{
     display: flex;
     flex-direction: column;
@@ -57,7 +61,7 @@
     border-radius: 5px;
     border: 0;
     transition: .2s;
-    font-size: 17px;
+    font-size: 100%;
     align-self: center;
     max-width: 100%;
     width: 90%;
@@ -71,6 +75,7 @@
     -webkit-appearance: none;
     -webkit-box-shadow: 0 0 2px 2px #000;
     box-shadow: 0 0 2px 2px #000;
+    font-size: 100%;
 }
 
 .label{
@@ -82,7 +87,7 @@
 
 #txtArea{
     margin-top: 10px;
-    font-size: 17px;
+    font-size: 100%;
     max-width: 100%;
     align-self: center;
     width: 90%;
@@ -103,6 +108,7 @@
     -webkit-appearance: none;
     -webkit-box-shadow: 0 0 2px 2px #000;
     box-shadow: 0 0 2px 2px #000;
+    font-size: 100%;
 }
 
 .btn{
