@@ -1,3 +1,4 @@
+selected = document.querySelector('.selected');
 hamburger.onclick = hamburgerClick;
 function hamburgerClick() {
     menuList.classList.toggle('is-active');
@@ -16,9 +17,11 @@ function fixedNav(){
     menuHeight = menu.offsetHeight;
     if(pageYOffset >= navOff){
         menu.classList.add('menuFixed');
+        selected.classList.add('changeColor');
         air.style.height = menuHeight + 'px';
     } else {
         menu.classList.remove('menuFixed');
+        selected.classList.remove('changeColor');
         air.style.height = 0;
     }
 }

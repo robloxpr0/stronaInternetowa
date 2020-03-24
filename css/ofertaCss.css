@@ -19,18 +19,18 @@
     font-weight: 600;
 }
 #cennik td{
-    border: 1px solid #BA883D;
+    border: 1px solid #6B3A02;
     padding: 30px;
 }
 #cennik th{
-    border: 1px solid #552205;
+    border: 1px solid #6B3A02;
     padding: 30px;
-    background-color: #552205;
+    background-color: #6B3A02;
 }
 
 #cennik tr:nth-child(odd){
-    background-color: #EDAE4E;
+    background-color: rgb(192, 128, 55);
 }
 #cennik tr:nth-child(even){
-    background-color: #D6A23C;
+    background-color: rgb(175, 107, 29);
 }
