@@ -57,6 +57,7 @@
     border-radius: 5px;
     border: 0;
     transition: .2s;
+    font-size: 17px;
     align-self: center;
     max-width: 100%;
     width: 90%;
@@ -68,8 +69,8 @@
 
 .input:focus{
     -webkit-appearance: none;
-    -webkit-box-shadow: 0 0 4px 3px #000;
-    box-shadow: 0 0 4px 3px #000;
+    -webkit-box-shadow: 0 0 2px 2px #000;
+    box-shadow: 0 0 2px 2px #000;
 }
 
 .label{
@@ -81,6 +82,7 @@
 
 #txtArea{
     margin-top: 10px;
+    font-size: 17px;
     max-width: 100%;
     align-self: center;
     width: 90%;
@@ -99,8 +101,8 @@
 }
 #txtArea:focus{
     -webkit-appearance: none;
-    -webkit-box-shadow: 0 0 4px 3px #000;
-    box-shadow: 0 0 4px 3px #000;
+    -webkit-box-shadow: 0 0 2px 2px #000;
+    box-shadow: 0 0 2px 2px #000;
 }
 
 .btn{
